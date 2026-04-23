@@ -7,8 +7,9 @@
     "start": "npx webpack serve --config webpack.config.dev.js",
     "build": "npx webpack --config webpack.config.prod.js",
     "build:dev": "npx webpack --config webpack.config.dev.js",
-    "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.js",
+    "lint:fix": "eslint src --ext .ts,.js --fix"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,8 @@
   "type": "commonjs",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
     "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^7.1.4",
     "css-minimizer-webpack-plugin": "^8.0.0",
@@ -27,6 +30,8 @@
     "sass-loader": "^16.0.7",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.4.0",
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.3",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.0",
     "webpack-dev-server": "^5.2.3",
